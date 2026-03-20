@@ -12,7 +12,7 @@
 
 3. **rectangle.asm** program, which draws a solid white rectangle on the screen (all pixels on the perimeter and inside the rectangle area are white):
 
-   ![[rectangle.png]]
+   ![Rectangle](imgs/rectangle.png)
 
    Where A is the top-left vertex, B is the bottom-left vertex, C is the bottom-right vertex, and D is the top-right vertex. The addresses of the rectangle's vertices relative to the start of the frame buffer are given at addresses 0x100 (A), 0x101 (B), 0x102 (C), 0x103 (D).
 

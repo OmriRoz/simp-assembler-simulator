@@ -1,18 +1,19 @@
 # Table of Contents:
-1. [[#Project Diagram]]
-2. [[#Registers Table]]
-3. [[#Main Memory and Instructions set]]
-	1. [[#Opcodes Table]]
-4. [[#Input/Output]]
-5. [[#Timer]]
-6. [[#Leds]]
-7. [[#Monitor]]
-8. [[#Hard Disk]]
-9. [[#Input/Output Files]]
+1. [Project Diagram](#Project%20Diagram)
+2. [Registers Table](#Registers%20Table)
+3. [Main Memory and Instructions set](#Main%20Memory%20and%20Instructions%20set)
+	1. [Opcodes Table](#Opcodes%20Table)
+4. [Interrupts](#interrupts)
+5. [Input/Output](#Input/Output)
+6. [Timer](#timer)
+7. [Leds](#Leds)
+8. [Monitor](#Monitor)
+9. [Hard Disk](#Hard%20Disk)
+10. [Input/Output Files](#Input/Output%20Files)
 
 
 # Project Diagram
-![[diagram.png]]
+![diagram](imgs/diagram.png)
 
 
 
@@ -42,11 +43,11 @@
 
 The main memory is 32 bits wide and 4096 lines deep. An instruction in the SIMP processor is encoded in one or two lines in memory, where the first line is given in the following format:
 
-![[first_line.png]]
+![first_line](first_line.png)
 
 The `bigimm` bit determines whether an additional line is used in the instruction encoding: If its value is 1, the instruction will use an additional line that will contain a 32-bit constant.
 
-![[second_line.png]]
+![second_line](second_line.png)
 
 The PC register is 12 bits wide. To advance to the next instruction (if there is no jump), the PC increments by one for instructions encoded in one line, or by two for instructions encoded in two lines.
 During instruction decoding, the constant ("register 1") is determined in one of two ways:
