@@ -1,15 +1,15 @@
 # Table of Contents:
-1. [Project Diagram](#Project%20Diagram)
-2. [Registers Table](#Registers%20Table)
-3. [Main Memory and Instructions set](#Main%20Memory%20and%20Instructions%20set)
-	1. [Opcodes Table](#Opcodes%20Table)
+1. [Project Diagram](#Project-Diagram)
+2. [Registers Table](#Registers-Table)
+3. [Main Memory and Instructions set](#Main-Memory-and-Instructions-set)
+	1. [Opcodes Table](#Opcodes-Table)
 4. [Interrupts](#interrupts)
 5. [Input/Output](#Input/Output)
 6. [Timer](#timer)
 7. [Leds](#Leds)
 8. [Monitor](#Monitor)
-9. [Hard Disk](#Hard%20Disk)
-10. [Input/Output Files](#Input/Output%20Files)
+9. [Hard Disk](#Hard-Disk)
+10. [Input/Output Files](#Input/Output-Files)
 
 
 # Project Diagram
