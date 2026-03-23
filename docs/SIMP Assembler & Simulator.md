@@ -182,13 +182,13 @@ As long as 1024 clock cycles have not passed since the command was received, the
 
 The simulator simulates the fetch-decode-execute loop. At the start of the run, PC=0. In each iteration, the next instruction is fetched from the address in the PC, decoded according to the encoding, and then executed. At the end of the instruction, the PC is updated to PC+1 or PC+2 (depending on whether the instruction is encoded in a single cell or two cells), unless a jump instruction was executed that updates the PC to a different value. The run ends and the simulator exits when a HALT instruction is executed.
 
-The simulator will be written in C and compiled into a command-line application that receives 13 command-line parameters according to the following execution line:
+The simulator receives 13 command-line parameters according to the following execution line:
 `sim.exe memin.txt diskin.txt irq2in.txt memout.txt regout.txt trace.txt hwregtrace.txt cycles.txt leds.txt display7seg.txt diskout.txt monitor.txt monitor.yuv`
+ **Input File Requirements**: The three input files must exist even if they are not used in your code (for example, for assembly code that does not use the hard disk, a `diskin.txt` file must still exist, though its content may be left empty).
 
 *   **memin.txt**: An input file in text format containing the contents of the main memory at the start of the run. Each line contains the content of a memory row, starting from address zero, in 8-digit hexadecimal format. If the number of lines in the file is less than 4096, it is assumed that the rest of the memory above the last initialized address is zeroed. You can assume the input file is valid.
 *   **diskin.txt**: An input file containing the contents of the hard disk at the start of the run, where each line contains 8 hexadecimal digits. If the number of lines is less than the disk size, the rest of the disk is assumed to be zeroed.
 *   **irq2in.txt**: An input file containing the clock cycle numbers in which the external interrupt line `irq2` rose to 1. Each such clock cycle is on a separate line in ascending order. The line rises to 1 for a single clock cycle and then drops back to zero (unless another line appears in the file for the next clock cycle).
-*   **Input File Requirements**: The three input files must exist even if they are not used in your code (for example, for assembly code that does not use the hard disk, a `diskin.txt` file must still exist, though its content may be left empty).
 *   **memout.txt**: An output file in the same format as `memin.txt`, containing the contents of the main memory at the end of the run.
 *   **regout.txt**: An output file containing the contents of registers R2-R15 at the end of the run (note that the constants R0–R1 should not be printed). Each line will be written in 8 hexadecimal digits.
 *   **trace.txt**: An output file containing a line of text for every instruction executed by the processor in the following format:
