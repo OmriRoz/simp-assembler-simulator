@@ -184,7 +184,7 @@ The simulator simulates the fetch-decode-execute loop. At the start of the run, 
 
 The simulator receives 13 command-line parameters according to the following execution line:
 `sim.exe memin.txt diskin.txt irq2in.txt memout.txt regout.txt trace.txt hwregtrace.txt cycles.txt leds.txt display7seg.txt diskout.txt monitor.txt monitor.yuv`
- **Input File Requirements**: The three input files must exist even if they are not used in your code (for example, for assembly code that does not use the hard disk, a `diskin.txt` file must still exist, though its content may be left empty).
+**Input File Requirements**: The three input files must exist even if they are not used in your code (for example, for assembly code that does not use the hard disk, a `diskin.txt` file must still exist, though its content may be left empty).
 
 *   **memin.txt**: An input file in text format containing the contents of the main memory at the start of the run. Each line contains the content of a memory row, starting from address zero, in 8-digit hexadecimal format. If the number of lines in the file is less than 4096, it is assumed that the rest of the memory above the last initialized address is zeroed. You can assume the input file is valid.
 *   **diskin.txt**: An input file containing the contents of the hard disk at the start of the run, where each line contains 8 hexadecimal digits. If the number of lines is less than the disk size, the rest of the disk is assumed to be zeroed.
